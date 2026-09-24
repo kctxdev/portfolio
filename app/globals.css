@@ -441,6 +441,67 @@ button {
   transform: translateY(-1px);
 }
 
+/* ─── cvlint highlight ───────────────────────────────────────────────────── */
+.cv-promo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: clamp(12px, 2.2vh, 22px);
+  padding: 7px 14px 7px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 180, 255, 0.28);
+  background: rgba(30, 58, 138, 0.22);
+  color: rgba(245, 247, 251, 0.9);
+  text-decoration: none;
+  font-size: clamp(0.78rem, 2vw, 0.86rem);
+  pointer-events: auto;
+  transition: border-color 200ms var(--ease), background 200ms var(--ease), transform 200ms var(--ease);
+}
+
+.cv-promo__tag {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+}
+
+.cv-promo i {
+  font-size: 0.72rem;
+  color: var(--cyan);
+}
+
+.cv-promo:hover {
+  border-color: rgba(143, 180, 255, 0.55);
+  background: rgba(30, 58, 138, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Featured project card (cvlint) */
+.work-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 180, 255, 0.4);
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.modal-link.modal-link--secondary {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid rgba(143, 180, 255, 0.28);
+  box-shadow: none;
+}
+
 /* ─── Landing page stats ─────────────────────────────────────────────────── */
 .identity__stats {
   display: flex;

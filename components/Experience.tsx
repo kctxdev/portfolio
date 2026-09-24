@@ -147,6 +147,18 @@ export default function Experience() {
               </span>
             </div>
 
+            <a
+              className="cv-promo"
+              href="https://cvlint.righi.dev"
+              target="_blank"
+              rel="noopener"
+              data-i18n="cvPromo"
+            >
+              <span className="cv-promo__tag">NEW</span>
+              <span className="cv-promo__text">Check your resume with cvlint</span>
+              <i className="fa-solid fa-arrow-up-right" aria-hidden="true" />
+            </a>
+
             <div className="terminal" id="terminal">
               <div className="terminal__bar">
                 <span className="terminal__dot" style={{ background: "#ff5f57" }} />
