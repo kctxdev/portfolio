@@ -28,10 +28,10 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[2]
 
 TARGETS = [
-    ("public/bernardo-righi-curriculo.pdf", 1, "pt"),
-    ("public/bernardo-righi-resume.pdf", 1, "en"),
-    ("public/bernardo-righi-curriculo-completo.pdf", 2, "pt"),
-    ("public/bernardo-righi-resume-full.pdf", 2, "en"),
+    ("public/Johnata-Silva-curriculo.pdf", 1, "pt"),
+    ("public/Johnata-Silva-resume.pdf", 1, "en"),
+    ("public/Johnata-Silva-curriculo-completo.pdf", 2, "pt"),
+    ("public/Johnata-Silva-resume-full.pdf", 2, "en"),
 ]
 
 HEADINGS = {
@@ -41,8 +41,8 @@ HEADINGS = {
            "EDUCATION", "LANGUAGES", "PROJECTS"],
 }
 
-EMAIL = "bernardomicolrighi@outlook.com"
-PHONE = "+55 (51) 99601-1501"
+EMAIL = "johnataichigo56@gmail.com"
+PHONE = "+55 (11) 95944-5413"
 
 # Anything outside these categories in the text layer is a red flag. Letters,
 # marks, numbers, punctuation, separators and symbols that carry a real Unicode

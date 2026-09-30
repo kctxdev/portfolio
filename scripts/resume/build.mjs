@@ -7,10 +7,10 @@
 // an ATS extracts is byte-for-byte the text that is on the page.
 //
 // Usage:  node scripts/resume/build.mjs [--out <dir>]
-// Output: public/bernardo-righi-curriculo.pdf            (pt, 1 page)
-//         public/bernardo-righi-resume.pdf               (en, 1 page)
-//         public/bernardo-righi-curriculo-completo.pdf   (pt, 2 pages)
-//         public/bernardo-righi-resume-full.pdf          (en, 2 pages)
+// Output: public/Johnata-Williamy-curriculo.pdf            (pt, 1 page)
+//         public/Johnata-Williamy-resume.pdf               (en, 1 page)
+//         public/Johnata-Williamy-curriculo-completo.pdf   (pt, 2 pages)
+//         public/Johnata-Williamy-resume-full.pdf          (en, 2 pages)
 //
 // After building, verify the text layer with: python3 scripts/resume/check.py
 

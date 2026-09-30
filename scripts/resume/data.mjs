@@ -1,4 +1,4 @@
-// Single source of truth for the resume PDFs (public/bernardo-righi-*.pdf).
+// Single source of truth for the resume PDFs (public/johnata-williamy-*.pdf).
 //
 // ATS rules this content must respect:
 //  - no icon fonts: every label is spelled out ("E-mail:", "Telefone:") instead
@@ -18,45 +18,39 @@
 // extracted text always say the same thing.
 
 const CONTACT = {
-  email: "bernardomicolrighi@outlook.com",
-  phone: "+55 (51) 99601-1501",
-  site: "righi.dev",
-  github: "github.com/righibe",
-  linkedin: "linkedin.com/in/bernardo-righi",
-  lattes: "lattes.cnpq.br/8608406696939587",
+  email: "johnataichigo56@gmail.com",
+  phone: "+55 (11) 95944-5413",
+  github: "github.com/kctxdev",
+  linkedin: "linkedin.com/in/johnatawilliamy",
 };
 
 const SKILLS = {
   pt: {
     full: [
-      ["Linguagens", "Python, Java, C, C++, JavaScript, SQL"],
-      ["IA & Agentes", "LangChain, LangGraph, LCEL, RAG, LLMs, scikit-learn"],
-      ["Observabilidade", "OpenTelemetry, Jaeger, Grafana, Agent Tracing"],
-      ["DevOps & Infra", "Docker, GitHub Actions, CI/CD, Git, Linux"],
-      ["Frameworks", "Spring Boot, Django, Flask, Discord.py"],
-      ["Bancos de Dados", "MySQL, JPA / Hibernate"],
+      ["Cloud & Segurança", "AWS (EC2, S3, IAM, VPC, Route53, Lambda, EventBridge, SNS), CloudTrail, CloudWatch, KMS, GuardDuty, MFA"],
+      ["DevOps & Automação", "Terraform, GitHub Actions, AWS CLI"],
+      ["Sistemas & Redes", "Linux (Ubuntu/Amazon Linux), JSON/YAML, fundamentos de DNS"],
+      ["Linguagens & Back-End", "Java, Python, Spring Boot, Spring AI"],
+      ["Dados & Integrações", "SQLite, BeautifulSoup4, pyTelegramBotAPI, Ollama, Vosk, eSpeak-NG"],
     ],
     compact: [
-      ["Linguagens", "Python, Java, C, C++, JavaScript, SQL"],
-      ["IA & Agentes", "LangChain, LangGraph, LCEL, RAG, LLMs, scikit-learn"],
-      ["Observabilidade & DevOps", "OpenTelemetry, Jaeger, Grafana, Agent Tracing, Docker, GitHub Actions, CI/CD, Git, Linux"],
-      ["Frameworks & Dados", "Spring Boot, Django, Flask, Discord.py, MySQL, JPA / Hibernate"],
+      ["Cloud & Segurança", "AWS (EC2, S3, IAM, VPC, Route53, Lambda, EventBridge, SNS), CloudTrail, CloudWatch, KMS, GuardDuty, MFA"],
+      ["DevOps, Automação & Redes", "Terraform, GitHub Actions, AWS CLI, Linux, JSON/YAML, DNS"],
+      ["Linguagens, Frameworks & Dados", "Java, Python, Spring Boot, Spring AI, SQLite, Ollama, Vosk, eSpeak-NG"],
     ],
   },
   en: {
     full: [
-      ["Languages", "Python, Java, C, C++, JavaScript, SQL"],
-      ["AI & Agents", "LangChain, LangGraph, LCEL, RAG, LLMs, scikit-learn"],
-      ["Observability", "OpenTelemetry, Jaeger, Grafana, Agent Tracing"],
-      ["DevOps & Infra", "Docker, GitHub Actions, CI/CD, Git, Linux"],
-      ["Frameworks", "Spring Boot, Django, Flask, Discord.py"],
-      ["Databases", "MySQL, JPA / Hibernate"],
+      ["Cloud & Security", "AWS (EC2, S3, IAM, VPC, Route53, Lambda, EventBridge, SNS), CloudTrail, CloudWatch, KMS, GuardDuty, MFA"],
+      ["DevOps & Automation", "Terraform, GitHub Actions, AWS CLI"],
+      ["Systems & Networking", "Linux (Ubuntu/Amazon Linux), JSON/YAML, networking/DNS fundamentals"],
+      ["Languages & Back-End", "Java, Python, Spring Boot, Spring AI"],
+      ["Data & Integrations", "SQLite, BeautifulSoup4, pyTelegramBotAPI, Ollama, Vosk, eSpeak-NG"],
     ],
     compact: [
-      ["Languages", "Python, Java, C, C++, JavaScript, SQL"],
-      ["AI & Agents", "LangChain, LangGraph, LCEL, RAG, LLMs, scikit-learn"],
-      ["Observability & DevOps", "OpenTelemetry, Jaeger, Grafana, Agent Tracing, Docker, GitHub Actions, CI/CD, Git, Linux"],
-      ["Frameworks & Data", "Spring Boot, Django, Flask, Discord.py, MySQL, JPA / Hibernate"],
+      ["Cloud & Security", "AWS (EC2, S3, IAM, VPC, Route53, Lambda, EventBridge, SNS), CloudTrail, CloudWatch, KMS, GuardDuty, MFA"],
+      ["DevOps, Automation & Networking", "Terraform, GitHub Actions, AWS CLI, Linux, JSON/YAML, DNS"],
+      ["Languages, Frameworks & Data", "Java, Python, Spring Boot, Spring AI, SQLite, Ollama, Vosk, eSpeak-NG"],
     ],
   },
 };
@@ -72,71 +66,59 @@ const skills = (lang) => ({
 
 const contactLines = (lang) => [
   lang === "pt"
-    ? [`E-mail: ${CONTACT.email}`, `Telefone: ${CONTACT.phone}`, "Local: Rio Grande do Sul, Brasil"]
-    : [`E-mail: ${CONTACT.email}`, `Phone: ${CONTACT.phone}`, "Location: Rio Grande do Sul, Brazil"],
+    ? [`E-mail: ${CONTACT.email}`, `Telefone: ${CONTACT.phone}`, "Local: Guarulhos, SP, Brasil"]
+    : [`E-mail: ${CONTACT.email}`, `Phone: ${CONTACT.phone}`, "Location: Guarulhos, SP, Brazil"],
   [
-    `Site: ${CONTACT.site}`,
     `GitHub: ${CONTACT.github}`,
     `LinkedIn: ${CONTACT.linkedin}`,
-    `Lattes: ${CONTACT.lattes}`,
   ],
 ];
 
 export const RESUME = {
   pt: {
     lang: "pt-BR",
-    file: "bernardo-righi-curriculo",
-    name: "Bernardo Micol Righi",
-    headline: "Desenvolvedor Back-End | Sistemas de IA | Tech Influencer",
+    file: "Johnata-Williamy-curriculo",
+    name: "Johnata Williamy Sousa da Silva",
+    headline: "Analista Júnior de Cloud & DevSecOps | AWS · Terraform · Governança de Segurança",
     contactLines: contactLines("pt"),
-    footer: `${CONTACT.site} | ${CONTACT.github} | ${CONTACT.linkedin} | ${CONTACT.lattes}`,
+    footer: `${CONTACT.github} | ${CONTACT.linkedin}`,
     sections: [
       {
         type: "text",
         title: "RESUMO PROFISSIONAL",
         body:
-          "Desenvolvedor back-end com 2 anos de experiência em Python, IA e automação. " +
-          "Pesquisador na Unisinos em parceria com a Dell, focado em observabilidade de agentes LLM " +
-          "usando LangChain e OpenTelemetry. Cofundador do Servidor dos Programadores, uma das seis " +
-          "maiores comunidades dev do Brasil no Discord (18 mil+ membros). Também crio conteúdo sobre " +
-          "programação e IA como tech influencer. Fluente em inglês.",
+          "Analista júnior de Cloud & Segurança da Informação, com experiência prática no ecossistema AWS. " +
+          "Atuando como consultor independente desde janeiro de 2026, construindo ambientes seguros do zero " +
+          "(Security by Design), com Infraestrutura como Código em Terraform, governança de acesso via IAM " +
+          "e práticas de auditoria automatizada e FinOps. Cursando Segurança da Informação, com a certificação " +
+          "AWS Cloud Practitioner (CLF-C02) em preparação.",
         shortBody:
-          "Desenvolvedor back-end com 2 anos de experiência em Python, IA e automação. " +
-          "Pesquisador na Unisinos em parceria com a Dell, focado em observabilidade de agentes LLM " +
-          "com LangChain e OpenTelemetry. Cofundador do Servidor dos Programadores, uma das seis " +
-          "maiores comunidades dev do Brasil no Discord (18 mil+ membros). Inglês fluente.",
+          "Analista júnior de Cloud & Segurança da Informação, com experiência prática no ecossistema AWS. " +
+          "Consultor independente desde janeiro de 2026, construindo ambientes seguros do zero (Security by " +
+          "Design), com IaC em Terraform, governança via IAM e práticas de auditoria e FinOps. Cursando " +
+          "Segurança da Informação, com a certificação AWS Cloud Practitioner (CLF-C02) em preparação.",
       },
       {
         type: "jobs",
         title: "EXPERIÊNCIA PROFISSIONAL",
         items: [
           {
-            role: "Pesquisador — Agentes de IA & Observabilidade",
-            org: "Unisinos / Dell Technologies",
-            meta: "Jun 2026 - Atual · Remoto",
+            role: "Analista de Cloud & DevSecOps (Consultor Independente)",
+            org: "Consultoria Independente / Serviços Especializados",
+            meta: "Jan 2026 - Atual · Remoto",
             bullets: [
-              "Pesquisando padrões de observabilidade para sistemas multiagente, estudando como rastrear comportamento, latência e falhas de agentes de IA em produção.",
-              "Investigando estratégias para rastrear chamadas de ferramentas, transferências entre agentes (handoffs) e propagação de contexto — projeto em fase de pesquisa e prototipagem de arquitetura junto ao time da Dell.",
-              "Entreguei um estudo comparativo de 6 pipelines de clusterização por embeddings (K-Means, UMAP, PaCMAP, LocalMAP, densMAP + HDBSCAN) sobre dados reais de atendimento, com validação estatística (trustworthiness, DBCV) fundamentada na literatura científica, orientando a abordagem do time para descoberta automática de tópicos.",
+              "Provisionamento e arquitetura de ambientes de nuvem AWS sob demanda, garantindo alta disponibilidade e segurança desde a fase de design (Security by Design).",
+              "Desenvolvimento de Infraestrutura como Código (IaC) com Terraform para provisionamento automatizado e padronizado de VPCs, sub-redes e security groups.",
+              "Implementação de governança de acesso e políticas de controle baseadas no Princípio do Menor Privilégio via AWS IAM e RBAC.",
+              "Configuração de auditoria contínua, monitoramento e rastreabilidade de eventos críticos de segurança com AWS CloudTrail e CloudWatch.",
+              "Construção de pipelines de automação CI/CD com GitHub Actions, integrando gerenciamento seguro de credenciais (AWS Secrets Manager) e garantindo deploys sem exposição de chaves.",
+              "Aplicação de práticas de FinOps, estruturando desligamento automático de recursos ociosos e tagueamento de centro de custo.",
             ],
             shortBullets: [
-              "Pesquisando padrões de observabilidade para sistemas multiagente: como rastrear comportamento, latência e falhas de agentes de IA em produção, incluindo chamadas de ferramentas, handoffs e propagação de contexto.",
-              "Entreguei um estudo comparativo de 6 pipelines de clusterização por embeddings (K-Means, UMAP, PaCMAP, LocalMAP, densMAP + HDBSCAN) sobre dados reais de atendimento, com validação estatística (trustworthiness, DBCV), orientando a abordagem do time para descoberta automática de tópicos.",
-            ],
-          },
-          {
-            role: "Cofundador & Desenvolvedor Back-End",
-            org: "Servidor dos Programadores",
-            meta: "Jun 2022 - Atual · Remoto",
-            bullets: [
-              "A comunidade crescia rápido, mas perdia membros por onboarding e moderação fracos — construí bots em Python e Discord.py que automatizaram boas-vindas e suporte técnico, melhorando a retenção e reduzindo o trabalho manual do time.",
-              "Com o crescimento acelerado, a infraestrutura passou a exigir deploys sem downtime — montei pipelines de CI/CD com GitHub Actions que testam e publicam atualizações automaticamente a cada push, eliminando deploys manuais.",
-              "Liderei a organização de eventos técnicos com patrocinadores como Alura, Shard Cloud e Hostinger, coordenando palestrantes e sessões ao vivo para 18 mil+ desenvolvedores.",
-            ],
-            shortBullets: [
-              "Construí bots em Python e Discord.py que automatizaram boas-vindas e suporte técnico, melhorando a retenção e reduzindo o trabalho manual do time.",
-              "Montei pipelines de CI/CD com GitHub Actions que testam e publicam atualizações a cada push, eliminando deploys manuais.",
-              "Liderei a organização de eventos técnicos com patrocinadores como Alura, Shard Cloud e Hostinger para 18 mil+ desenvolvedores.",
+              "Provisionamento e arquitetura de ambientes AWS sob demanda, com segurança desde a fase de design (Security by Design).",
+              "Infraestrutura como Código com Terraform para VPCs, sub-redes e security groups, com governança de acesso via IAM/RBAC.",
+              "Pipelines CI/CD com GitHub Actions e AWS Secrets Manager, garantindo deploys sem exposição de chaves.",
+              "Práticas de FinOps: desligamento automático de recursos ociosos e tagueamento de centro de custo.",
             ],
           },
         ],
@@ -147,9 +129,14 @@ export const RESUME = {
         title: "FORMAÇÃO ACADÊMICA",
         items: [
           {
-            degree: "Bacharelado em Ciência da Computação",
-            school: "Universidade do Vale do Rio dos Sinos (Unisinos)",
-            meta: `Fev 2026 - Atual · São Leopoldo, Brasil · Lattes: ${CONTACT.lattes}`,
+            degree: "Bacharelado em Tecnologia em Segurança da Informação",
+            school: "Cruzeiro do Sul Virtual",
+            meta: "Jan 2026 - Dez 2027 (em andamento) · Remoto",
+          },
+          {
+            degree: "Ensino Médio",
+            school: "Erem Severino de Andrade Guerra",
+            meta: "Concluído em 2025",
           },
         ],
       },
@@ -158,13 +145,13 @@ export const RESUME = {
         title: "CURSOS E CERTIFICAÇÕES",
         full: true,
         body:
-          "Maratona Java (Java Virado no Jiraya) · Python Mundo 1, 2 e 3 · HTML5 e CSS3 (Curso em Vídeo) · " +
-          "Imersão DevOps e Python (Alura) · Design and Social Enterprise HDSE Leadership (Lehigh University)",
+          "AWS Certified Cloud Practitioner (CLF-C02) — em preparação (SimuLearn, 12 módulos concluídos) · " +
+          "Cloud Security Fundamentals (SimuLearn) · Infrastructure as Code: Introduction to Terraform (HashiCorp Labs)",
       },
       {
         type: "text",
         title: "IDIOMAS",
-        body: "Português: nativo | Inglês: fluente (C1) | Espanhol: intermediário (B1)",
+        body: "Português: nativo | Inglês: intermediário",
       },
       {
         type: "projects",
@@ -172,71 +159,71 @@ export const RESUME = {
         items: [
           {
             core: true,
-            name: "Agente de Suporte Técnico com IA",
-            tech: "Python · LLMs · OpenAI GPT-4o · APIs RESTful",
-            url: `${CONTACT.github}/technical-suport-Agent`,
+            name: "CloudGuard: Governança Automatizada & FinOps",
+            tech: "Terraform · AWS Lambda (Python) · EventBridge · CloudTrail",
+            url: CONTACT.github,
             short:
-              "Agente autônomo em Python com GPT-4o que interpreta chamados de suporte de primeiro nível e devolve respostas contextuais via APIs RESTful, sem escalonamento humano.",
+              "Plataforma de governança orientada a eventos que detecta e remedia automaticamente riscos de segurança e desperdício financeiro na AWS.",
             bullets: [
-              "Situação: chamados de suporte técnico de primeiro nível precisavam de triagem mais rápida, sem depender de um atendente humano.",
-              "Ação: construí um agente autônomo em Python usando GPT-4o para interpretar os chamados e gerar respostas contextuais via APIs RESTful.",
-              "Resultado: automatizei respostas de primeiro nível para casos comuns, sem escalonamento humano.",
+              "Situação: ambientes de nuvem sob demanda exigiam remediação rápida de riscos de segurança e desperdício financeiro sem depender de intervenção manual constante.",
+              "Ação: desenvolvi uma plataforma de governança orientada a eventos usando AWS Lambda, EventBridge e CloudTrail, provisionada via Terraform, com auto-remediação de buckets S3 expostos publicamente e verificação de conformidade de tags de centro de custo.",
+              "Resultado: o sistema detecta e bloqueia automaticamente exposições indevidas, sinaliza recursos sem tags de custo e desliga recursos ociosos em ambientes de teste, reduzindo risco e desperdício financeiro.",
             ],
           },
           {
             core: true,
-            name: "Pipeline de CI/CD em Python",
-            tech: "Python · GitHub Actions · Docker · Flask",
-            url: `${CONTACT.github}/ci-cd-pipeline-python`,
+            name: "CloudGuard: Detecção de Ameaças & Resposta a Incidentes",
+            tech: "Terraform · AWS GuardDuty · Lambda · EventBridge · CloudTrail · SSM/IMDSv2",
+            url: CONTACT.github,
             short:
-              "Pipeline completo com GitHub Actions e Docker: testes automáticos a cada push e deploy no container somente quando tudo passa, eliminando deploys manuais.",
+              "Infraestrutura blindada com detecção de ameaças e isolamento automático de instâncias comprometidas, sem acesso SSH.",
             bullets: [
-              "Situação: não havia processo automatizado de testes ou deploy — cada atualização era um risco de bug em produção.",
-              "Ação: construí um pipeline completo com GitHub Actions e Docker, rodando testes automáticos a cada push e fazendo deploy no container só se tudo passasse.",
-              "Resultado: eliminei os deploys manuais e ganhei a garantia de que só código validado chegava ao ambiente.",
+              "Situação: ambientes AWS precisavam de detecção de ameaças e contenção de instâncias comprometidas sem intervenção manual, além de acesso sem SSH.",
+              "Ação: provisionei uma infraestrutura blindada via Terraform (EC2 sem SSH/IP público, acesso via SSM, IMDSv2 obrigatório), com GuardDuty e CloudTrail para detecção e auditoria, e uma função Lambda acionada pelo EventBridge para isolar automaticamente instâncias comprometidas, além de um pipeline CI/CD com GitHub Actions via OIDC.",
+              "Resultado: contenção automática de ameaças em segundos (troca de Security Group para isolamento), evidências forenses preservadas em S3 criptografado, e infraestrutura implantada sem credenciais estáticas.",
             ],
           },
           {
             core: true,
-            name: "Bot de IA Generativa para Discord",
-            tech: "Python · Discord.py · API de LLM open source",
-            url: `${CONTACT.github}/bot-discord-IAgenerativa`,
+            name: "Pipeline CI/CD DevSecOps com Gestão de Segredos",
+            tech: "GitHub Actions · Terraform · AWS Secrets Manager · IAM",
+            url: CONTACT.github,
             short:
-              "Bot em Discord.py integrado a uma API de IA generativa open source, com contexto multiturno, atendendo 18 mil+ membros da comunidade em tempo real.",
+              "Pipeline CI/CD com Terraform e GitHub Actions que elimina totalmente a exposição de chaves de acesso no código-fonte.",
             bullets: [
-              "Situação: a comunidade queria suporte de IA em tempo real dentro do Discord, sem depender de APIs pagas.",
-              "Ação: construí um bot com Discord.py integrando uma API de IA generativa open source, com contexto de conversa multiturno.",
-              "Resultado: dei suporte de IA gratuito e em tempo real a 18 mil+ membros da comunidade, direto no servidor.",
+              "Situação: pipelines de deploy careciam de gestão adequada de segredos, criando risco de exposição de credenciais e padrões inconsistentes de infraestrutura segura.",
+              "Ação: arquitetei um pipeline CI/CD com GitHub Actions e Terraform, eliminando completamente a exposição de chaves de acesso no código-fonte via GitHub Secrets e AWS Secrets Manager, provisionando VPC, IAM e S3 sob o princípio do menor privilégio.",
+              "Resultado: exposição zero de credenciais no repositório e infraestrutura provisionada de forma consistente e segura em todos os deploys.",
             ],
           },
           {
-            name: "Predição de Preços de Imóveis — São Paulo",
-            tech: "Python · scikit-learn · Decision Tree · Random Forest",
-            url: `${CONTACT.github}/predict-prices-sp`,
+            name: "Monitoramento de Custos & Auditoria Contínua (AWS)",
+            tech: "Terraform · CloudTrail · CloudWatch · SNS",
+            url: CONTACT.github,
             bullets: [
-              "Situação: queria aplicar ML supervisionado a um problema real, indo além da teoria.",
-              "Ação: treinei e comparei Decision Tree e Random Forest com scikit-learn para prever preços de imóveis em São Paulo, analisando a importância das features.",
-              "Resultado: identifiquei localização e metragem como as variáveis dominantes e consolidei minha base prática em regressão.",
+              "Situação: a falta de visibilidade sobre os custos da conta AWS gerava risco de cobranças inesperadas, além da ausência de rastreabilidade formal das ações na conta.",
+              "Ação: provisionei um pipeline de auditoria contínua via Terraform com CloudTrail, um cofre de logs S3 com escrita restrita, e um alarme de billing no CloudWatch com notificações automáticas por e-mail via SNS quando os custos ultrapassavam um limite definido.",
+              "Resultado: alertas proativos de custo prevenindo cobranças inesperadas (FinOps) e rastreabilidade completa de quem fez o quê, quando e de onde, preparando a conta para auditorias de segurança.",
             ],
           },
           {
-            name: "API REST CRUD — Django & SQL",
-            tech: "Python · Django · REST Framework · MySQL",
-            url: `${CONTACT.github}/CRUD-Python-Django`,
+            name: "Finance AI Voice API — Edição 100% Gratuita & Local",
+            tech: "Java · Spring Boot · Spring AI · Ollama · Vosk · eSpeak-NG",
+            url: CONTACT.github,
             bullets: [
-              "Situação: precisava de prática com o ORM do Django e padrões REST além do Flask.",
-              "Ação: construí uma API REST CRUD completa com Django conectada a um banco SQL, estruturando validação e serialização.",
-              "Resultado: consolidei os fundamentos de Django e padrões de design de API REST transferíveis para produção.",
+              "Situação: uma API de orçamento financeiro pessoal controlada por voz dependia de serviços pagos (OpenAI) para chat, transcrição e síntese de voz, gerando custos recorrentes.",
+              "Ação: reconstruí a camada de IA da aplicação Spring Boot, substituindo serviços pagos por alternativas 100% locais e offline — Ollama para chat com Tool Calling, Vosk para transcrição de voz e eSpeak-NG para síntese — mantendo o domínio e a arquitetura em camadas originais.",
+              "Resultado: eliminação completa dos custos recorrentes de API de IA, com a aplicação rodando de ponta a ponta (voz → ação → voz) inteiramente na máquina do usuário.",
             ],
           },
           {
-            name: "API REST de Cadastro de Pessoas — Java",
-            tech: "Java · Spring Boot · JPA / Hibernate · Spring Web",
-            url: `${CONTACT.github}/Cadastro-pessoas`,
+            name: "Job Hunter Pro — Bot de Telegram",
+            tech: "Python · pyTelegramBotAPI · BeautifulSoup4 · SQLite",
+            url: CONTACT.github,
             bullets: [
-              "Situação: eu só tinha experiência em Python e precisava entender o ecossistema Java.",
-              "Ação: construí uma API REST do zero com Spring Boot e JPA, seguindo o fluxo Controller / Service / Repository com DTO e ORM.",
-              "Resultado: uma base sólida em Java e clareza sobre o padrão MVC para projetos corporativos.",
+              "Situação: buscar vagas manualmente em múltiplos sites (Vagas.com, Indeed, InfoJobs, Catho, Trabalha Brasil) era lento, repetitivo e cheio de falsos positivos.",
+              "Ação: construí um bot de Telegram em Python que agrega vagas de múltiplos sites simultaneamente via web scraping, aplica um filtro de precisão para eliminar recomendações/falsos positivos, usa geolocalização por IP para sugerir buscas regionais, e armazena resultados recentes localmente (SQLite) por 30 minutos.",
+              "Resultado: busca de vagas consolidada em um único chat, respostas instantâneas em buscas repetidas, e menor risco de bloqueio por limite de requisições dos sites de origem.",
             ],
           },
         ],
@@ -246,58 +233,49 @@ export const RESUME = {
 
   en: {
     lang: "en",
-    file: "bernardo-righi-resume",
-    name: "Bernardo Micol Righi",
-    headline: "Back-End Developer | AI Systems | Tech Influencer",
+    file: "Johnata-Williamy-resume",
+    name: "Johnata Williamy Sousa da Silva",
+    headline: "Junior Cloud & DevSecOps Analyst | AWS · Terraform · Security Governance",
     contactLines: contactLines("en"),
-    footer: `${CONTACT.site} | ${CONTACT.github} | ${CONTACT.linkedin} | ${CONTACT.lattes}`,
+    footer: `${CONTACT.github} | ${CONTACT.linkedin}`,
     sections: [
       {
         type: "text",
         title: "PROFESSIONAL SUMMARY",
         body:
-          "Back-end developer with 2 years of experience in Python, AI, and automation. " +
-          "Researcher at Unisinos in partnership with Dell, focused on LLM agent observability using " +
-          "LangChain and OpenTelemetry. Cofounded Servidor dos Programadores, one of the six largest dev " +
-          "communities in Brazil on Discord (18k+ members). I also create content about programming and AI " +
-          "as a tech influencer. Fluent in English.",
+          "Junior analyst in Cloud & Information Security, with hands-on experience in the AWS ecosystem. " +
+          "Working as an independent contractor since January 2026, building secure environments from the " +
+          "ground up (Security by Design), with Infrastructure as Code in Terraform, access governance via " +
+          "IAM, and automated auditing and FinOps practices. Currently pursuing a degree in Information " +
+          "Security, with the AWS Cloud Practitioner (CLF-C02) certification in preparation.",
         shortBody:
-          "Back-end developer with 2 years of experience in Python, AI, and automation. " +
-          "Researcher at Unisinos in partnership with Dell, focused on LLM agent observability with " +
-          "LangChain and OpenTelemetry. Cofounder of Servidor dos Programadores, one of the six largest " +
-          "dev communities in Brazil on Discord (18k+ members). Fluent in English.",
+          "Junior analyst in Cloud & Information Security, with hands-on experience in the AWS ecosystem. " +
+          "Independent contractor since January 2026, building secure environments from the ground up " +
+          "(Security by Design), with Terraform IaC, IAM governance, and auditing/FinOps practices. " +
+          "Currently pursuing a degree in Information Security, with the AWS Cloud Practitioner (CLF-C02) " +
+          "certification in preparation.",
       },
       {
         type: "jobs",
         title: "PROFESSIONAL EXPERIENCE",
         items: [
           {
-            role: "Researcher — AI Agents & Observability",
-            org: "Unisinos / Dell Technologies",
-            meta: "Jun 2026 - Present · Remote",
+            role: "Cloud & DevSecOps Analyst (Independent Contractor)",
+            org: "Specialized Services / Independent Consulting",
+            meta: "Jan 2026 - Present · Remote",
             bullets: [
-              "Researching observability patterns for multi-agent systems, studying how to trace behavior, latency, and failures of AI agents in production.",
-              "Investigating strategies to trace tool calls, agent handoffs, and context propagation — project in a research and architecture-prototyping phase alongside the Dell team.",
-              "Delivered a comparative study of 6 embedding-clustering pipelines (K-Means, UMAP, PaCMAP, LocalMAP, densMAP + HDBSCAN) on real support-ticket data, with statistical validation (trustworthiness, DBCV) grounded in the scientific literature, informing the team's approach to automatic topic discovery.",
+              "Provisioning and architecting on-demand AWS cloud environments, ensuring high availability and security from the design phase (Security by Design).",
+              "Developing Infrastructure as Code (IaC) with Terraform for automated, standardized provisioning of VPCs, subnets, and security groups.",
+              "Implementing access governance and control policies based on the Principle of Least Privilege via AWS IAM and RBAC.",
+              "Setting up continuous auditing, monitoring, and traceability of critical security events with AWS CloudTrail and CloudWatch.",
+              "Building CI/CD automation pipelines with GitHub Actions, integrating secure credential management (AWS Secrets Manager) and ensuring deploys without key exposure.",
+              "Applying FinOps practices, structuring automatic shutdown of idle resources and cost-center tagging.",
             ],
             shortBullets: [
-              "Researching observability patterns for multi-agent systems: how to trace behavior, latency, and failures of AI agents in production, including tool calls, agent handoffs, and context propagation.",
-              "Delivered a comparative study of 6 embedding-clustering pipelines (K-Means, UMAP, PaCMAP, LocalMAP, densMAP + HDBSCAN) on real support-ticket data, with statistical validation (trustworthiness, DBCV), informing the team's approach to automatic topic discovery.",
-            ],
-          },
-          {
-            role: "Cofounder & Back-End Developer",
-            org: "Servidor dos Programadores",
-            meta: "Jun 2022 - Present · Remote",
-            bullets: [
-              "The community was growing fast but losing members due to poor onboarding and moderation — I built Python and Discord.py bots that automated welcomes and technical support, improving retention and reducing the team's manual work.",
-              "As growth accelerated, the infrastructure needed zero-downtime deploys — I set up CI/CD pipelines with GitHub Actions that automatically test and ship updates on every push, eliminating manual deploys.",
-              "Led the organization of technical events with sponsors like Alura, Shard Cloud, and Hostinger, coordinating speakers and live sessions for 18k+ developers.",
-            ],
-            shortBullets: [
-              "Built Python and Discord.py bots that automated welcomes and technical support, improving retention and reducing the team's manual work.",
-              "Set up CI/CD pipelines with GitHub Actions that test and ship updates on every push, eliminating manual deploys.",
-              "Led the organization of technical events with sponsors like Alura, Shard Cloud, and Hostinger for 18k+ developers.",
+              "Provisioning and architecting on-demand AWS environments, secure from the design phase (Security by Design).",
+              "Infrastructure as Code with Terraform for VPCs, subnets and security groups, with IAM/RBAC access governance.",
+              "CI/CD pipelines with GitHub Actions and AWS Secrets Manager, ensuring deploys without key exposure.",
+              "FinOps practices: automatic shutdown of idle resources and cost-center tagging.",
             ],
           },
         ],
@@ -308,9 +286,14 @@ export const RESUME = {
         title: "EDUCATION",
         items: [
           {
-            degree: "B.Sc. in Computer Science",
-            school: "Universidade do Vale do Rio dos Sinos (Unisinos)",
-            meta: `Feb 2026 - Present · São Leopoldo, Brazil · Lattes: ${CONTACT.lattes}`,
+            degree: "Bachelor of Technology in Information Security",
+            school: "Cruzeiro do Sul Virtual",
+            meta: "Jan 2026 - Dec 2027 (in progress) · Remote",
+          },
+          {
+            degree: "High School",
+            school: "Erem Severino de Andrade Guerra",
+            meta: "Completed in 2025",
           },
         ],
       },
@@ -319,13 +302,13 @@ export const RESUME = {
         title: "COURSES AND CERTIFICATIONS",
         full: true,
         body:
-          "Java Marathon (Java Virado no Jiraya) · Python Worlds 1, 2 and 3 · HTML5 and CSS3 (Curso em Vídeo) · " +
-          "DevOps and Python Immersion (Alura) · Design and Social Enterprise HDSE Leadership (Lehigh University)",
+          "AWS Certified Cloud Practitioner (CLF-C02) — in preparation (SimuLearn, 12 modules completed) · " +
+          "Cloud Security Fundamentals (SimuLearn) · Infrastructure as Code: Introduction to Terraform (HashiCorp Labs)",
       },
       {
         type: "text",
         title: "LANGUAGES",
-        body: "Portuguese: native | English: fluent (C1) | Spanish: intermediate (B1)",
+        body: "Portuguese: native | English: intermediate",
       },
       {
         type: "projects",
@@ -333,71 +316,71 @@ export const RESUME = {
         items: [
           {
             core: true,
-            name: "AI Technical Support Agent",
-            tech: "Python · LLMs · OpenAI GPT-4o · RESTful APIs",
-            url: `${CONTACT.github}/technical-suport-Agent`,
+            name: "CloudGuard: Automated Governance & FinOps",
+            tech: "Terraform · AWS Lambda (Python) · EventBridge · CloudTrail",
+            url: CONTACT.github,
             short:
-              "Autonomous Python agent powered by GPT-4o that interprets first-line support tickets and returns contextual resolutions through RESTful APIs, with no human escalation.",
+              "Event-driven governance platform that automatically detects and remediates AWS security risks and financial waste.",
             bullets: [
-              "Situation: first-line technical support tickets needed faster triage without waiting on a human agent.",
-              "Action: built an autonomous agent in Python powered by GPT-4o to interpret tickets and generate contextual resolutions through RESTful APIs.",
-              "Result: automated first-level responses for common cases without human escalation.",
+              "Situation: on-demand cloud environments required fast remediation of security risks and financial waste without relying on constant manual intervention.",
+              "Action: developed an event-driven governance platform using AWS Lambda, EventBridge, and CloudTrail, provisioned via Terraform, with auto-remediation of publicly exposed S3 buckets and cost-center tag compliance checks.",
+              "Result: the system automatically detects and blocks improper exposures, flags resources missing cost tags, and shuts down idle resources in test environments, reducing risk and financial waste.",
             ],
           },
           {
             core: true,
-            name: "CI/CD Pipeline in Python",
-            tech: "Python · GitHub Actions · Docker · Flask",
-            url: `${CONTACT.github}/ci-cd-pipeline-python`,
+            name: "CloudGuard: Threat Detection & Incident Response",
+            tech: "Terraform · AWS GuardDuty · Lambda · EventBridge · CloudTrail · SSM/IMDSv2",
+            url: CONTACT.github,
             short:
-              "Complete pipeline with GitHub Actions and Docker: automated tests on every push and a container deploy only when everything passes, eliminating manual deploys.",
+              "Hardened AWS infrastructure with threat detection and automatic isolation of compromised instances, no SSH access.",
             bullets: [
-              "Situation: no automated testing or deployment process — every update was a production-bug risk.",
-              "Action: built a complete pipeline with GitHub Actions and Docker, running automated tests on every push and deploying to the container only if everything passed.",
-              "Result: eliminated manual deploys and gained the guarantee that only validated code reached the environment.",
+              "Situation: AWS environments needed threat detection and containment of compromised instances without manual intervention, along with SSH-free access.",
+              "Action: provisioned a hardened infrastructure via Terraform (EC2 with no SSH/public IP, access via SSM, mandatory IMDSv2), with GuardDuty and CloudTrail for detection and auditing, and a Lambda function triggered by EventBridge to automatically isolate compromised instances, plus a CI/CD pipeline with GitHub Actions via OIDC.",
+              "Result: automatic threat containment within seconds (Security Group swap for isolation), forensic evidence preserved in encrypted S3, and infrastructure deployed with no static credentials.",
             ],
           },
           {
             core: true,
-            name: "Generative AI Discord Bot",
-            tech: "Python · Discord.py · Open-source LLM API",
-            url: `${CONTACT.github}/bot-discord-IAgenerativa`,
+            name: "CI/CD DevSecOps Pipeline with Secrets Management",
+            tech: "GitHub Actions · Terraform · AWS Secrets Manager · IAM",
+            url: CONTACT.github,
             short:
-              "Discord.py bot integrated with an open-source generative AI API, handling multi-turn conversation context for 18k+ community members in real time.",
+              "CI/CD pipeline with Terraform and GitHub Actions that fully eliminates access-key exposure in source code.",
             bullets: [
-              "Situation: the community wanted real-time AI assistance inside Discord without relying on paid APIs.",
-              "Action: built a bot with Discord.py integrating an open-source generative AI API, handling multi-turn conversation context.",
-              "Result: gave 18k+ community members free, real-time AI support directly inside the server.",
+              "Situation: deployment pipelines lacked proper secrets management, creating risk of credential exposure and inconsistent secure infrastructure standards.",
+              "Action: architected a CI/CD pipeline with GitHub Actions and Terraform, completely eliminating access key exposure in source code via GitHub Secrets and AWS Secrets Manager, provisioning VPC, IAM, and S3 under the least-privilege principle.",
+              "Result: zero credential exposure in the repository and infrastructure consistently and securely provisioned across all deploys.",
             ],
           },
           {
-            name: "Housing Price Prediction — São Paulo",
-            tech: "Python · scikit-learn · Decision Tree · Random Forest",
-            url: `${CONTACT.github}/predict-prices-sp`,
+            name: "Cost Monitoring & Continuous Auditing (AWS)",
+            tech: "Terraform · CloudTrail · CloudWatch · SNS",
+            url: CONTACT.github,
             bullets: [
-              "Situation: wanted to apply supervised ML to a real problem, moving beyond theory.",
-              "Action: trained and compared Decision Tree and Random Forest with scikit-learn to predict housing prices in São Paulo, analyzing feature importance.",
-              "Result: identified location and square footage as the dominant variables and solidified my hands-on foundation in regression.",
+              "Situation: lack of visibility into AWS account costs created risk of unexpected charges, along with an absence of formal traceability of account actions.",
+              "Action: provisioned a continuous auditing pipeline via Terraform with CloudTrail, a restricted-write S3 log vault, and a CloudWatch billing alarm with automatic email notifications via SNS when costs exceeded a defined threshold.",
+              "Result: proactive cost alerts preventing unexpected charges (FinOps) and full traceability of who did what, when, and from where, preparing the account for security audits.",
             ],
           },
           {
-            name: "CRUD REST API — Django & SQL",
-            tech: "Python · Django · REST Framework · MySQL",
-            url: `${CONTACT.github}/CRUD-Python-Django`,
+            name: "Finance AI Voice API — 100% Free & Local Edition",
+            tech: "Java · Spring Boot · Spring AI · Ollama · Vosk · eSpeak-NG",
+            url: CONTACT.github,
             bullets: [
-              "Situation: needed hands-on practice with Django's ORM and REST patterns beyond Flask.",
-              "Action: built a full CRUD REST API with Django connected to a SQL database, structuring validation and serialization.",
-              "Result: solidified Django fundamentals and REST API design patterns transferable to production work.",
+              "Situation: a voice-controlled personal finance budgeting API relied on paid services (OpenAI) for chat, transcription, and voice synthesis, generating recurring costs.",
+              "Action: rebuilt the AI layer of the Spring Boot application, replacing paid services with 100% local, offline alternatives — Ollama for chat with Tool Calling, Vosk for voice transcription, and eSpeak-NG for synthesis — while keeping the domain and layered architecture identical to the original version.",
+              "Result: complete elimination of recurring AI API costs, with the application running end-to-end (voice → action → voice) entirely on the user's machine.",
             ],
           },
           {
-            name: "People Registry REST API — Java",
-            tech: "Java · Spring Boot · JPA / Hibernate · Spring Web",
-            url: `${CONTACT.github}/Cadastro-pessoas`,
+            name: "Job Hunter Pro — Telegram Bot",
+            tech: "Python · pyTelegramBotAPI · BeautifulSoup4 · SQLite",
+            url: CONTACT.github,
             bullets: [
-              "Situation: only had Python experience and needed to understand the Java ecosystem.",
-              "Action: built a REST API from scratch with Spring Boot and JPA, following the Controller / Service / Repository flow with DTO and ORM.",
-              "Result: a solid foundation in Java and clarity on the MVC pattern for enterprise projects.",
+              "Situation: manually searching for jobs across multiple sites (Vagas.com, Indeed, InfoJobs, Catho, Trabalha Brasil) was slow and repetitive, with many false-positive results.",
+              "Action: built a Python Telegram bot that aggregates listings from multiple sites simultaneously via web scraping, applies a precision filter to eliminate recommended/false-positive listings, uses IP-based geolocation to suggest regional searches, and caches recent results locally (SQLite) for 30 minutes.",
+              "Result: consolidated job search in a single chat, instant responses on repeated searches, and lower risk of being rate-limited by source sites.",
             ],
           },
         ],

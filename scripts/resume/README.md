@@ -19,10 +19,10 @@ O `check.py` precisa de `pypdf` (`python3 -m pip install pypdf`).
 
 | Arquivo | Idioma | Páginas | Uso |
 | --- | --- | --- | --- |
-| `bernardo-righi-curriculo.pdf` | pt | 1 | botão de download do site |
-| `bernardo-righi-resume.pdf` | en | 1 | botão de download do site |
-| `bernardo-righi-curriculo-completo.pdf` | pt | 2 | versão completa, sob demanda |
-| `bernardo-righi-resume-full.pdf` | en | 2 | versão completa, sob demanda |
+| `Johnata-Silva-Curriculo.pdf` | pt | 1 | botão de download do site |
+| `Johnata-Silva-Resume.pdf` | en | 1 | botão de download do site |
+| `Johnata-Silva-Curriculo.completo.pdf` | pt | 2 | versão completa, sob demanda |
+| `Johnata-Silva-Resume.full.pdf` | en | 2 | versão completa, sob demanda |
 
 ## Por que Chromium e não LaTeX
 

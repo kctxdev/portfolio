@@ -15,10 +15,10 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bernardo Righi | Backend Developer",
+  title: "Johnata Williamy | Backend Developer",
   description:
-    "Bernardo Righi portfolio as an immersive neural interface: software, AI, leadership, projects and contact.",
-  icons: { icon: "/favicon.svg" },
+    "Johnata Williamy portfolio as an immersive neural interface: software, AI, leadership, projects and contact.",
+  icons: { icon: "/favicon-32x32.png" },
 };
 
 export const viewport: Viewport = {

@@ -5,20 +5,20 @@ import Image from "next/image";
 import { initEngine } from "@/lib/engine";
 
 // Python snippet shown in the hero terminal (pre-highlighted spans).
-const TERMINAL_CODE = `<code><span style="color:#ff7b72;">class</span> <span style="color:#d2a8ff;">Developer</span>:
+const TERMINAL_CODE = `<code><span style="color:#ff7b72;">class</span> <span style="color:#d2a8ff;">DevSecOps</span>:
   <span style="color:#ff7b72;">def</span> <span style="color:#d2a8ff;">__init__</span>(<span style="color:#79c0ff;">self</span>):
-    <span style="color:#79c0ff;">self</span>.name  = <span style="color:#a5d6ff;">"Bernardo"</span>
-    <span style="color:#79c0ff;">self</span>.years = <span style="color:#79c0ff;">2</span>
+    <span style="color:#79c0ff;">self</span>.name  = <span style="color:#a5d6ff;">"Johnata"</span>
+    <span style="color:#79c0ff;">self</span>.years = <span style="color:#79c0ff;">3+</span>
     <span style="color:#79c0ff;">self</span>.stack = [
-      <span style="color:#a5d6ff;">"Python"</span>,
-      <span style="color:#a5d6ff;">"Java"</span>,
-      <span style="color:#a5d6ff;">"C"</span>,
+      <span style="color:#a5d6ff;">"AWS"</span>,
+      <span style="color:#a5d6ff;">"Terraform"</span>,
+      <span style="color:#a5d6ff;">"Linux"</span>,
     ]
-    <span style="color:#79c0ff;">self</span>.degree = <span style="color:#a5d6ff;">"C.S."</span>
-    <span style="color:#79c0ff;">self</span>.uni = <span style="color:#a5d6ff;">"Unisinos"</span>
+    <span style="color:#79c0ff;">self</span>.degree = <span style="color:#a5d6ff;">"InfoSec"</span>
+    <span style="color:#79c0ff;">self</span>.status = <span style="color:#a5d6ff;">"Cursando"</span>
 
 <span style="color:#ff7b72;">if</span> __name__ == <span style="color:#a5d6ff;">"__main__"</span>:
-  Developer()</code>`;
+  DevSecOps()</code>`;
 
 const NAV_SECTIONS = [
   ["about", "About"],
@@ -44,13 +44,13 @@ export default function Experience() {
 
       <header className="topbar">
         <div className="signal-group">
-          <a className="signal" href="#" aria-label="Bernardo Righi home">
+          <a className="signal" href="#" aria-label="Johnata Williamy home">
             <span className="signal__mark" />
-            <span>Bernardo Righi</span>
+            <span>Johnata Williamy</span>
           </a>
           <div className="signal-socials">
             <a
-              href="https://github.com/righibe"
+              href="https://github.com/kctxdev/Kctxdev"
               target="_blank"
               rel="noopener"
               className="signal-social"
@@ -59,7 +59,7 @@ export default function Experience() {
               <i className="fa-brands fa-github" />
             </a>
             <a
-              href="https://www.linkedin.com/in/bernardo-righi/"
+              href="https://www.linkedin.com/in/Johnata-Williamy/"
               target="_blank"
               rel="noopener"
               className="signal-social"
@@ -68,7 +68,7 @@ export default function Experience() {
               <i className="fa-brands fa-linkedin" />
             </a>
             <a
-              href="https://www.instagram.com/righi._/"
+              href="https://www.instagram.com/kctxns"
               target="_blank"
               rel="noopener"
               className="signal-social"
@@ -77,8 +77,8 @@ export default function Experience() {
               <i className="fa-brands fa-instagram" />
             </a>
             <a
-              href="/bernardo-righi-resume.pdf"
-              download="bernardo-righi-resume.pdf"
+              href="{/Johnata-Silva-Resume.pdf"
+              download="Johnata-Silva-Resume.pdf"
               className="cv-download"
               data-i18n="downloadCv"
               aria-label="Download CV"
@@ -109,20 +109,18 @@ export default function Experience() {
         <section className="identity" aria-label="Intro">
           <div className="identity__inner">
             <div className="identity__photo">
-              <Image src="/avatar.png" alt="Bernardo Righi" width={180} height={180} priority />
+              <Image src="/avatar.png" alt="Johnata Williamy" width={180} height={180} priority />
             </div>
             <p className="identity__eyebrow" data-i18n="heroEyebrow">
-              Back-End Developer | Machine Learning &amp; Data Analysis
+              Cloud & DevSecOps Analyst · AWS & Terraform
             </p>
-            <h1 data-i18n="heroTitle">Bernardo Righi</h1>
+            <h1 data-i18n="heroTitle">Johnata Williamy</h1>
             <p className="identity__copy">
-              Back-end developer building APIs, automations and intelligent
-              systems with Python and Java — with a strong pull toward Machine
-              Learning, data and how systems really work underneath.
+              Cloud & DevSecOps Expert automating infrastructure & security via AWS and Terraform with full commitment to Security by Design, active data shielding and high resource management.
             </p>
             <div className="identity__stats">
               <div className="istat">
-                <strong>2+</strong>
+                <strong>3+</strong>
                 <span data-i18n="statYears">years building</span>
               </div>
               <div className="istat">
@@ -130,8 +128,8 @@ export default function Experience() {
                 <span data-i18n="statProjects">projects realized</span>
               </div>
               <div className="istat">
-                <strong>Top 6</strong>
-                <span data-i18n="statCommunity">Brazil dev community</span>
+                <strong></strong>
+                <span data-i18n=""></span>
               </div>
             </div>
 
@@ -140,31 +138,17 @@ export default function Experience() {
                 Portuguese <small>Native</small>
               </span>
               <span className="lang-badge">
-                English <small>Fluent</small>
-              </span>
-              <span className="lang-badge">
-                Spanish <small>Intermediate</small>
+                English <small>Intermediate</small>
               </span>
             </div>
 
-            <a
-              className="cv-promo"
-              href="https://cvlint.righi.dev"
-              target="_blank"
-              rel="noopener"
-              data-i18n="cvPromo"
-            >
-              <span className="cv-promo__tag">NEW</span>
-              <span className="cv-promo__text">Check your resume with cvlint</span>
-              <i className="fa-solid fa-arrow-up-right" aria-hidden="true" />
-            </a>
-
+            
             <div className="terminal" id="terminal">
               <div className="terminal__bar">
                 <span className="terminal__dot" style={{ background: "#ff5f57" }} />
                 <span className="terminal__dot" style={{ background: "#febc2e" }} />
                 <span className="terminal__dot" style={{ background: "#28c840" }} />
-                <span className="terminal__title">~/bernardo/developer.py</span>
+                <span className="terminal__title">~/Johnata/developer.py</span>
               </div>
               <div className="terminal__body">
                 <pre
