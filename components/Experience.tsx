@@ -50,7 +50,7 @@ export default function Experience() {
           </a>
           <div className="signal-socials">
             <a
-              href="https://github.com/kctxdev/Kctxdev"
+              href="https://github.com/kctxdev"
               target="_blank"
               rel="noopener"
               className="signal-social"
