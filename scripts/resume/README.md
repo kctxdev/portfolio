@@ -27,7 +27,7 @@ O `check.py` precisa de `pypdf` (`python3 -m pip install pypdf`).
 ## Por que Chromium e não LaTeX
 
 A versão anterior era pdfTeX + FontAwesome. Cada ícone caía na camada de texto
-como glifo sem mapeamento, e o ATS lia coisas como `♂phone+55 (51) 99601-1501`
+como glifo sem mapeamento, e o ATS lia coisas como `♂phone+55 (11) 95944-5413`
 e `💼EXPERIENCIA PROFISSIONAL`. O Chromium embute `ToUnicode` correto nas fontes
 que ele faz subset, então o texto extraído é igual ao texto da página.
 
